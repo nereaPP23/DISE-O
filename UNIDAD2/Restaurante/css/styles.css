@@ -1,0 +1,433 @@
+/* Estilos generales */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #D0DBD6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header */
+.content {
+    min-height: 80px;
+    background: linear-gradient(
+        #8F0103 0%,
+        #E00004 90%
+    );
+}
+
+.menu {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+}
+
+.menu .navegacion ul li {
+    position: relative;
+    float: left;
+    margin-right: 130px;
+    margin-top: -20px;
+}
+
+.menu .navegacion ul li a {
+    font-size: 17px;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: bold;
+    margin-right: 100px;
+}
+
+.menu .navegacion ul li a:hover {
+    color: rgb(7, 7, 7);
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.logo img{
+    width: 155px;
+    margin-left: -20px;
+    margin-top: -25px;
+}
+
+/* Seccion hero */
+#hero {
+    background: url('/../imagenes/cachopo.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 150px 0;
+    text-align: center;
+    position: relative;
+}
+
+#hero::before {
+   content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+#hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: #8F0103;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #E00004;
+    color: #ddb8b8
+}
+
+#button1 {
+    display: inline-block;
+    animation: rebote 1s infinite;
+}
+
+#moving {
+    animation: slideInDown 0.8s ease-in-out;
+}
+
+/* Sección Sobre Nosotros */
+#about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/*Explicación platos*/
+#platos {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#platos h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.iws-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.iws-column {
+    width: 45%;
+    border: 1px none;
+    padding: 2em;
+    text-align: center;
+    transition: transform 0.4s ease;
+    border-radius: 10px;
+}
+
+.iws-column img {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.iws-column:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+.iws-column ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff; 
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.iws-column ul li:hover {
+    background-color: #8F0103; 
+    color: #fff;
+    cursor: pointer;
+}
+
+#img1 {
+    width: 200px;
+    height: 200px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.columnas {
+    display: flex;
+    column-gap: 28%;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+}
+
+.text-element {
+    line-height: 2;
+}
+
+.text-element li a {
+    color: #E00004;
+}
+
+.text-element img {
+    max-height: 65px;
+}
+
+#instagram {
+    width: 44px;
+    height: 42px;
+}
+
+.redes ul {
+    display: flex;
+}
+
+.redes img {
+    width: 40px;
+}
+
+.redes li {
+    margin-right: 1rem;
+}
+
+.redes li:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.footer-final {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    color: #fff;
+    font-size: 0.9rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.politicas ul {
+    display: flex;
+    flex-flow: row;
+}
+
+.politicas ul li {
+    padding-right: 1rem;
+}
+
+.politicas ul a {
+    color: #E00004;
+    font-size: 0.9rem;
+}
+
+#footerespecial {
+    display: flex;
+    column-gap: 25%;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+}
+
+.secciones li:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.secciones li a:hover {
+    color: #8F0103;
+}
+
+
+
+
+/* SECCIÓN MENU */
+
+#menu {
+    padding: 50px 0;
+}
+
+#menu h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#img2{
+    width: 350px;
+    height: 300px;
+}
+
+#grow-and-shrink {
+    animation: grow-and-shrink 1.5s infinite;
+    animation-delay: .5s;
+}
+
+/*Tabla precios menu*/
+
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: #8F0103;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+table td {
+    font-size: 1rem;
+    color: #333;
+}
+
+table td:hover{
+    background-color: #8F0103;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+/* SECCIÓN RESERVA */
+#reserva {
+    padding: 50px 0;
+}
+
+#reserva h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#reserva form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+/*keyframes*/
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rebote{
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes grow-and-shrink { 
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+

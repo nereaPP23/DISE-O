@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/*Header*/
+header {
+    background-color: rgb(22, 74, 119);
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+ }
+
+header nav {
+    padding: 30px;
+}
+
+ header nav ul{
+    background-color: brown;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 15px;
+    margin-right: 20px;
+ }
+
+ header nav a{
+    color: aliceblue;
+    padding: 30px;
+ }
+
+
+/*Main*/
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex: 1;
+}
+
+/*Articulos*/
+
+section {
+    margin: 20px;
+}
+
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    width: 70%;
+}
+
+hr {
+    border: solid 1px rgb(0, 0, 0);
+    width: 70%;
+}
+
+/*Recángulos*/
+.contendor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 25px;
+    background-color:rgb(238, 125, 59);
+}
+
+.rectángulo {
+    width: 350px;
+    height: 200px;
+    background-color: blue;
+}
+
+
+/*Footer*/
+footer {
+    background-color: rgb(22, 74, 119);
+    color: white;
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .contacto {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+footer .redes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.redes img {
+    width: 50px;
+    height: 50px;
+}
