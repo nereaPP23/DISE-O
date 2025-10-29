@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+/*Header*/
+header {
+    background-color: rgb(179, 11, 11);
+    color: aliceblue;
+    display: grid;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    height: 70px;
+    margin-right: 10px;
+    margin-left: 10px;
+ }
+
+header nav {
+    padding: 30px;
+}
+
+ header nav ul{
+    background-color: rgb(94, 7, 7);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    gap: 50px;
+    padding: 15px;
+    margin-right: 20px;
+ }
+
+ header nav a{
+    color: aliceblue;
+    padding: 30px;
+ }
+
+ header nav a:hover{
+    color: rgb(219, 103, 103);
+    transition: all 0.2s ease-in-out;
+ }
+
+
+/*Main*/
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+/*Articulos*/
+
+section {
+    margin: 20px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    width: 70%;
+}
+
+hr {
+    border: solid 1px rgb(0, 0, 0);
+    width: 70%;
+}
+
+/*Recángulos*/
+.contendor {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 25px;
+    background-color:rgb(216, 114, 114);
+}
+
+.rectángulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectángulo img{
+    width: 550px;
+    height: 330px;
+}
+
+
+/*Footer*/
+footer {
+    background-color: rgb(179, 11, 11);
+    color: white;
+    padding: 20px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+footer .contacto {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+footer .redes {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+}
+
+.redes img {
+    width: 50px;
+    height: 50px;
+}
