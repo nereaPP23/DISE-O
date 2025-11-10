@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0px auto;
+  width: 90%;
+}
+
+.container > * {
+  height: 150px;
+}
+
+header {
+  background-color: yellow;
+  padding-top: 2em;
+  text-align: center;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.violeta {
+  background-color: violet;
+}
+
+.negro {
+  background-color: black;
+  height: 70px;
+}
+
+@media screen and (min-width: 576px) {
+  .red,
+  .blue {
+    float: left;
+    width: 50%;
+  }
+
+  .green, 
+  .violeta {
+    float: left;
+    width: 50%;
+  }
+
+  .negro {
+    float: left;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .red,
+  .blue, 
+  .green {
+    float: left;
+    width: 33.33%;
+  }
+
+  .violeta, 
+  .negro {
+    float: left;
+    width: 50%;
+    height: 70px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  header {
+    background-color: orange;
+    color: green;
+  }
+}
