@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: rgb(211, 137, 186);
+}
+
+header {
+  color: rgb(255, 255, 255);
+}
+
 .container {
   margin: 0px auto;
   width: 90%;
@@ -10,6 +18,8 @@
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 
@@ -17,12 +27,76 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px auto;
-    border: 1px solid black;
-    padding: 15px 50px;
-    
+    margin: 15px auto;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 15px 20px;
+    width: 290px;
 }
 
 img {
   width: 250px;
+}
+
+@media screen and (max-width: 576px) {
+   body {
+    background-color: rgb(196, 215, 226);
+  }
+
+  header {
+    color: black;
+  }
+
+  .gallo, .corzo, .oso {
+    width: 80%;
+    background-color: orange;
+    border: 1px solid blue;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 778px) {
+  body {
+    background-color: rgb(50, 94, 121);
+    color: white;
+  }
+
+  img{
+    width: 200px;
+  }
+
+
+  .gallo, .corzo{
+    width: 46%;
+    background-color: rgb(50, 94, 121);
+    border: 1px solid green;
+    margin: 0 10px;
+  }
+  .oso {
+    background-color: rgb(50, 94, 121);
+    border: 1px solid green;
+    flex-direction: row;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 779px) and (max-width: 992px) {
+  body {
+    background-color: rgb(53, 185, 93);
+  }
+
+  header{
+    color: black;
+  }
+
+  img{
+    width: 190px;
+  }
+
+  .gallo, .corzo, .oso {
+    width: 30%;
+    background-color: rgb(53, 185, 93);
+    border: 1px solid red;
+    margin: 0 10px;
+  }
+  
 }
