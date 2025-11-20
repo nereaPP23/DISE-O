@@ -1,9 +1,16 @@
 :root {
   --color-fondo: #fff8f0;
   --color-texto: #333;
-  --color-primario: #8B4513;
+  --color-primario: #633B1A;
   --color-secundario: #D2691E;
   --color-acento: #FF7F50;
+}
+
+/*Estilos generales*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -13,35 +20,117 @@ body {
   color: var(--color-texto);
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-fondo);
+
+}
+
 header {
-  background-color: var(--color-primario);
-  color: white;
-  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(46, 26, 5, 0.9);
+  transition: all 0.3s ease;
+}
+
+.header-todo {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
-nav ul {
-  list-style: none;
+.logo img {
+  width: 120px;
+  height: 70px;
+}
+
+.nav-menu {
   display: flex;
   gap: 1rem;
-  padding: 0;
+  list-style: none;
+  margin: 0;
 }
 
-nav a {
-  color: white;
+li a {
+  color: var(--color-fondo);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+li a:hover {
+  color: var(--color-acento);
+  text-decoration: underline;
+  transition: all 0.5s ease;
+}
+
+
+/*INTRODUCCION*/
+.introduccion {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.diputaciondezamora.es/opencms/export/sites/dipu-zamora/.Archivos/imagenes/provincia/nuestros-ayuntamientos/fresno-de-la-polvorosa.jpg_1058435998.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--color-fondo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.introduccion-contenido {
+  max-width: 800px;
+  padding: 50px;
+}
+
+.introduccion-contenido h1 {
+  font-size: 55px;
+  text-shadow: 4px 4px 4px rgba(0,0,0,1);
+}
+
+.introduccion-contenido p {
+  font-size: 20px;
+  text-shadow: 4px 4px 4px rgba(0,0,0,1);
+  margin-top: 1px;
+  margin-bottom: 40px;
+}
+
+.btn-primario {
+  background-color: var(--color-secundario);
+  color: var(--color-fondo);
+  padding: 15px 20px;
+  font-size: 17px;
+  border-radius: 30px;
+  cursor: pointer;
   text-decoration: none;
 }
 
+.btn-primario:hover {
+  background-color: var(--color-primario);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+
+
+
+
+
+
+
+/*SEPARACION DE SECCIONES*/
 main {
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;

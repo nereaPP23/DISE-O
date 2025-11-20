@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Magosto - Fresno de la Polvorosa</title>
+    <meta name="description" content="Descubre la tradición del Magosto en Fresno de la Polvorosa. Una celebración ancestral que combina historia, cultura y diversión.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style id="app-style">
+        :root {
+            --primary: #8B4513;
+            --secondary: #D2691E;
+            --accent: #FF7F50;
+            --light: #F5DEB3;
+            --dark: #2E1A05;
+            --text-light: #F5F5F5;
+            --text-dark: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            padding: 3rem 0;
+            min-height: 100vh;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(46, 26, 5, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            max-height: 50px;
+        }
+
+        .logo-text {
+            color: var(--text-light);
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://cdn.pixabay.com/photo/2020/11/01/18/06/autumn-5704791_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--text-light);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* History Section */
+        .history {
+            background-color: #fff;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--secondary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            top: 20px;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -12.5px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -12.5px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--light);
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Traditions Section */
+        .traditions {
+            background-color: #f8f8f8;
+            position: relative;
+        }
+
+        .traditions::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(to bottom right, transparent 49%, #f8f8f8 50%),
+                        linear-gradient(to bottom left, transparent 49%, #f8f8f8 50%);
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+            background-position: left top, right top;
+            z-index: 1;
+            margin-top: -50px;
+        }
+
+        .gallery-container {
+            width: 100%;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.6);
+            color: var(--text-light);
+            padding: 1rem;
+            font-size: 0.9rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .swiper-slide:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Resources Section */
+        .resources {
+            background-color: #fff;
+            position: relative;
+        }
+
+        .resources::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(to bottom right, transparent 49%, #fff 50%),
+                        linear-gradient(to bottom left, transparent 49%, #fff 50%);
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+            background-position: left top, right top;
+            z-index: 1;
+            margin-top: -50px;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .resource-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .resource-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .resource-content {
+            padding: 1.5rem;
+        }
+
+        .resource-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .download-btn {
+            background-color: var(--primary);
+            color: var(--text-light);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .download-btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--text-light);
+            padding: 3rem 0 1rem;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(to bottom right, transparent 49%, var(--dark) 50%),
+                        linear-gradient(to bottom left, transparent 49%, var(--dark) 50%);
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+            background-position: left top, right top;
+            z-index: 1;
+            margin-top: -50px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        .footer-title {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--accent);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1024px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 18px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .header-inner {
+                padding: 1rem;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(46, 26, 5, 0.95);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                gap: 1.5rem;
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+            }
+
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            .swiper {
+                height: 300px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .swiper {
+                height: 250px;
+            }
+
+            .timeline-item {
+                padding-left: 50px;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <img src="https://cdn.pixabay.com/photo/2014/12/21/23/34/chestnut-576001_640.png" alt="Logo del Magosto" width="40" height="40">
+                <span class="logo-text">Magosto Fresno</span>
+            </div>
+            <button class="mobile-nav-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#introduccion" class="nav-link">Introducción</a></li>
+                <li><a href="#historia" class="nav-link">Historia</a></li>
+                <li><a href="#tradiciones" class="nav-link">Tradiciones</a></li>
+                <li><a href="#recursos" class="nav-link">Recursos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="introduccion" class="hero section">
+        <div class="hero-content">
+            <h1>El Magosto de Fresno de la Polvorosa</h1>
+            <p>Una ancestral celebración otoñal que combina tradición, cultura y comunidad. Descubre el encanto de esta fiesta tradicional donde las castañas, el fuego y la alegría son los protagonistas.</p>
+            <a href="#historia" class="btn-primary">Descubrir más</a>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="historia" class="history section">
+        <div class="container">
+            <h2 class="section-title">Historia del Magosto</h2>
+            <div class="row mb-4">
+                <div class="col-lg-6">
+                    <p>El Magosto es una fiesta popular celebrada principalmente en Galicia, Asturias, León, Zamora y norte de Portugal, que tiene lugar durante los meses de otoño, especialmente alrededor del día de Todos los Santos (1 de noviembre) y el día de San Martín (11 de noviembre).</p>
+                    <p>En Fresno de la Polvorosa, un pequeño pueblo de la provincia de Zamora, esta tradición ha perdurado a lo largo de los siglos como una forma de celebrar la cosecha otoñal y prepararse para el invierno, manteniendo vivas las raíces celtas y romanas de la región.</p>
+                </div>
+                <div class="col-lg-6">
+                    <p>La palabra "magosto" proviene del latín "magnus ustus" que significa "gran fuego", haciendo referencia a la hoguera alrededor de la cual se reúnen los participantes para asar castañas, elemento central de esta celebración.</p>
+                    <p>La fiesta del Magosto se asocia con rituales antiguos vinculados al culto a los muertos y a la fertilidad de la tierra. En su origen, el fuego purificador del Magosto servía para ahuyentar a los malos espíritus y honrar a los antepasados.</p>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">Orígenes celtas</span>
+                        <p>El Magosto tiene sus orígenes en antiguas celebraciones celtas que marcaban el inicio del año nuevo celta (Samhain), una época de transición entre el verano y el invierno donde el velo entre el mundo de los vivos y los muertos se adelgazaba.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">Época romana</span>
+                        <p>Durante la romanización, estas celebraciones se sincretizaron con las festividades romanas dedicadas a Pomona, diosa de los frutos y la abundancia, integrando nuevos elementos como el consumo ritual de productos de temporada.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">Edad Media</span>
+                        <p>Con la cristianización, el Magosto se asoció con la festividad de Todos los Santos, manteniendo su esencia comunitaria pero adaptándose al nuevo calendario litúrgico cristiano.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">Siglos XIX-XX</span>
+                        <p>En Fresno de la Polvorosa, el Magosto se consolidó como una celebración comunitaria fundamental, donde las familias compartían las castañas recolectadas en los bosques cercanos y celebraban juntos el final de la temporada de cosecha.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">Actualidad</span>
+                        <p>Hoy en día, el Magosto en Fresno de la Polvorosa se ha revitalizado como parte del esfuerzo por preservar las tradiciones locales, convirtiéndose en un atractivo cultural que une a diferentes generaciones y atrae visitantes interesados en el patrimonio cultural inmaterial de la región.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditions Section -->
+    <section id="tradiciones" class="traditions section">
+        <div class="container">
+            <h2 class="section-title">Tradiciones y Cultura</h2>
+            <div class="row mb-4">
+                <div class="col-lg-6">
+                    <h3>¿Cómo se celebra el Magosto?</h3>
+                    <p>La celebración del Magosto en Fresno de la Polvorosa comienza con la recolección de castañas en los bosques cercanos durante las semanas previas a la fiesta. Las familias participan en esta tarea, transmitiendo conocimientos sobre los mejores lugares para encontrar castañas de calidad.</p>
+                    <p>El día del Magosto, los vecinos se reúnen en un espacio abierto del pueblo, generalmente en la plaza o en una era comunal. Allí, se enciende una gran hoguera que servirá tanto para asar las castañas como para proporcionar calor durante la reunión, que suele extenderse hasta bien entrada la noche.</p>
+                    <p>Las castañas se preparan realizando un corte en su cáscara para evitar que estallen durante el asado. Tradicionalmente se utilizan tambores agujereados o sartenes especiales llamadas "magosteiras" para tostarlas al fuego.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Elementos tradicionales</h3>
+                    <p>Además de las castañas, otros elementos típicos del Magosto de Fresno de la Polvorosa incluyen:</p>
+                    <ul class="mb-3">
+                        <li><strong>Vino nuevo:</strong> Se acompaña la degustación de castañas con el primer vino de la temporada.</li>
+                        <li><strong>Chorizo asado:</strong> Otro producto tradicional que se cocina en las brasas.</li>
+                        <li><strong>Música tradicional:</strong> Panderetas, tambores y gaitas amenizan la celebración.</li>
+                        <li><strong>Bailes populares:</strong> Los participantes ejecutan danzas tradicionales alrededor del fuego.</li>
+                        <li><strong>Juegos tradicionales:</strong> Se organizan competiciones y actividades para todas las edades.</li>
+                        <li><strong>"Tiznar" las caras:</strong> Un ritual lúdico donde los participantes se marcan las mejillas con las cenizas del fuego.</li>
+                    </ul>
+                    <p>Esta celebración fortalece los lazos comunitarios y sirve como punto de encuentro intergeneracional, donde los mayores transmiten conocimientos a los más jóvenes.</p>
+                </div>
+            </div>
+            
+            <!-- Gallery -->
+            <h3 class="text-center mb-4">Galería del Magosto</h3>
+            <div class="gallery-container">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://cdn.pixabay.com/photo/2015/11/07/11/19/chestnuts-1031459_1280.jpg" alt="Castañas asadas típicas del Magosto">
+                            <div class="gallery-caption">Castañas asadas, el elemento central de la celebración del Magosto</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://cdn.pixabay.com/photo/2020/02/25/09/57/fire-4878515_1280.jpg" alt="Hoguera tradicional del Magosto">
+                            <div class="gallery-caption">La hoguera, símbolo purificador y centro de reunión durante la fiesta</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://cdn.pixabay.com/photo/2018/11/09/16/35/chestnuts-3805132_1280.jpg" alt="Recolección de castañas en el bosque">
+                            <div class="gallery-caption">La recolección de castañas es una actividad familiar previa al Magosto</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://cdn.pixabay.com/photo/2018/09/23/18/30/persons-3698056_1280.jpg" alt="Celebración comunitaria del Magosto">
+                            <div class="gallery-caption">El Magosto reúne a toda la comunidad en una celebración de amistad y tradición</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://cdn.pixabay.com/photo/2019/11/05/12/56/red-wine-4603482_1280.jpg" alt="Vino nuevo típico del Magosto">
+                            <div class="gallery-caption">El vino nuevo de la temporada es el acompañamiento perfecto para las castañas asadas</div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            
+            <!-- Video -->
+            <div class="row mt-5">
+                <div class="col-lg-8 offset-lg-2">
+                    <h3 class="text-center mb-4">Descubre el Magosto</h3>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/f4KxlZGHZU0" title="Celebración del Magosto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-center mt-3">Vídeo ilustrativo de una celebración tradicional del Magosto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="recursos" class="resources section">
+        <div class="container">
+            <h2 class="section-title">Recursos y Materiales</h2>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <img class="resource-img" src="https://cdn.pixabay.com/photo/2014/09/26/10/45/cookbook-462351_1280.jpg" alt="Recetas tradicionales del Magosto">
+                    <div class="resource-content">
+                        <h4 class="resource-title">Recetas tradicionales</h4>
+                        <p>Descubre las mejores formas de preparar castañas y otros platos típicos que acompañan la celebración del Magosto.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-outline-primary">Ver más</a>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <img class="resource-img" src="https://cdn.pixabay.com/photo/2018/08/25/16/06/calendar-3630743_1280.jpg" alt="Calendario de actividades">
+                    <div class="resource-content">
+                        <h4 class="resource-title">Calendario del Magosto</h4>
+                        <p>Consulta las fechas de celebración y eventos relacionados con el Magosto en Fresno de la Polvorosa y alrededores.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-outline-primary">Ver agenda</a>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <img class="resource-img" src="https://cdn.pixabay.com/photo/2019/06/25/08/07/folklore-4297191_1280.jpg" alt="Música tradicional">
+                    <div class="resource-content">
+                        <h4 class="resource-title">Música y cantos</h4>
+                        <p>Explora la tradición musical que acompaña al Magosto, con cantos populares y melodías tradicionales de la región.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-outline-primary">Escuchar</a>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <img class="resource-img" src="https://cdn.pixabay.com/photo/2017/10/13/16/15/education-2848310_1280.jpg" alt="Recursos educativos">
+                    <div class="resource-content">
+                        <h4 class="resource-title">Material educativo</h4>
+                        <p>Recursos para docentes y familias que quieran enseñar la tradición del Magosto a las nuevas generaciones.</p>
+                        <a href="javascript:void(0)" class="btn btn-sm btn-outline-primary">Descargar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="download-section">
+                <h3>¿Te ha gustado nuestra web?</h3>
+                <p>Descarga la plantilla completa de este sitio web para utilizarla en tus proyectos o adaptarla a tus necesidades.</p>
+                <button class="download-btn" id="downloadBtn">
+                    <i class="fas fa-download"></i> Descargar plantilla
+                </button>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <h3>Validación</h3>
+                    <p>Este sitio web cumple con los estándares de accesibilidad web y ha sido validado por W3C para asegurar su correcta estructura HTML y CSS.</p>
+                    <div class="d-flex">
+                        <a href="javascript:void(0)" class="me-3">
+                            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt="Logo HTML5" width="60">
+                        </a>
+                        <a href="javascript:void(0)">
+                            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" alt="Logo CSS3" width="60">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Contacto</h3>
+                    <p>Para más información sobre la fiesta del Magosto en Fresno de la Polvorosa o para colaborar con nuestra web, no dudes en ponerte en contacto con nosotros.</p>
+                    <a href="javascript:void(0)" class="btn btn-outline-secondary">
+                        <i class="fas fa-envelope"></i> Contactar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">El Magosto</h4>
+                    <p>Celebración tradicional de Fresno de la Polvorosa que mantiene viva la esencia cultural de nuestra comunidad a través de generaciones.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Enlaces rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#introduccion">Inicio</a></li>
+                        <li><a href="#historia">Historia</a></li>
+                        <li><a href="#tradiciones">Tradiciones</a></li>
+                        <li><a href="#recursos">Recursos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Síguenos</h4>
+                    <div class="social-links">
+                        <a href="javascript:void(0)" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="javascript:void(0)" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="javascript:void(0)" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="javascript:void(0)" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 El Magosto de Fresno de la Polvorosa. Todos los derechos reservados.</p>
+                <p>Diseño web creado con fines educativos.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
