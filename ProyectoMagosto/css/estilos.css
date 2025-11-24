@@ -1,9 +1,10 @@
 :root {
-  --color-fondo: #fff8f0;
+  --color-texto2: #fff8f0;
   --color-texto: #333;
   --color-primario: #633B1A;
   --color-secundario: #D2691E;
   --color-acento: #FF7F50;
+  --color-cajas: #ffd6a0;
 }
 
 /*Estilos generales*/
@@ -16,14 +17,14 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: var(--color-fondo);
+  background-color: var(--color-texto2);
   color: var(--color-texto);
 }
 
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--color-fondo);
+  color: var(--color-texto2);
 
 }
 
@@ -62,7 +63,7 @@ header {
 }
 
 li a {
-  color: var(--color-fondo);
+  color: var(--color-texto2);
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 0;
@@ -81,7 +82,7 @@ li a:hover {
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.diputaciondezamora.es/opencms/export/sites/dipu-zamora/.Archivos/imagenes/provincia/nuestros-ayuntamientos/fresno-de-la-polvorosa.jpg_1058435998.jpg');
   background-size: cover;
   background-attachment: fixed;
-  color: var(--color-fondo);
+  color: var(--color-texto2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,13 +103,13 @@ li a:hover {
 .introduccion-contenido p {
   font-size: 20px;
   text-shadow: 4px 4px 4px rgba(0,0,0,1);
-  margin-top: 1px;
+  margin-top: 10px;
   margin-bottom: 40px;
 }
 
 .btn-primario {
   background-color: var(--color-secundario);
-  color: var(--color-fondo);
+  color: var(--color-texto2);
   padding: 15px 20px;
   font-size: 17px;
   border-radius: 30px;
@@ -124,6 +125,163 @@ li a:hover {
 }
 
 
+/*EL PUEBLO*/
+.pueblo {
+  padding: 2rem 4rem;
+}
+
+.pueblo h2 {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 33px;
+  color: var(--color-texto); 
+}
+
+.pueblo-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.pueblo-texto {
+  flex: 1 1 400px;
+  font-size: 1.1rem;
+  color: var(--color-texto);
+  line-height: 30px;
+}
+
+.pueblo-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card-pueblo {
+  background: var(--color-cajas);
+  padding: 20px;
+  width: 200px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.card-pueblo:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.25);
+}
+
+.icono {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.card-pueblo h3 {
+  color: var(--color-primario);
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.card-pueblo p {
+  font-size: 17px;
+  color: var(--color-texto);
+}
+
+.pueblo-visual {
+  width: 100%;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mapa {
+  width: 50%;
+  height: 300px;
+}
+
+
+
+
+/*HISTORIA*/
+.titulo-historia {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 33px;
+  color: var(--color-texto); 
+}
+
+.historia-row {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 70%;
+  margin: 0 auto 10px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.historia-col {
+  width: 50%;
+  padding: 20px;
+}
+
+
+/*LINEA DEL TIEMPO*/
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+
+.line {   /*La raya central*/
+  position: absolute; 
+  height: 90%;
+  left: 50%;
+  width: 10px;
+  background: var(--color-acento);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end; 
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.timeline-item.izq {
+  justify-content: flex-end; 
+  padding-right: 55%;
+}
+
+.timeline-item.der {
+  justify-content: flex-start; 
+  padding-left: 55%;           
+}
+
+.timeline-contenido {
+  background: var(--color-cajas);
+  padding: 1rem;
+  border-radius: 4px;
+  max-width: 500px;
+}
+
+.timeline-contenido p {
+  padding: 10px 0;
+  line-height: 25px;
+}
+
+.timeline-anio {
+  font-weight: bold;
+  color: var(--color-secundario);
+}
 
 
 
@@ -161,7 +319,7 @@ video {
 }
 
 footer {
-  background-color: var(--color-secundario);
+  background-color: var(--color-primario);
   color: white;
   text-align: center;
   padding: 1rem;
