@@ -36,6 +36,20 @@ h1 {
   color: var(--color-texto); 
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 70%;
+  margin: 0 auto 10px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.col {
+  width: 50%;
+  padding: 20px;
+}
+
 
 /*HEADER*/
 header {
@@ -217,20 +231,6 @@ li a:hover {
 
 
 /*HISTORIA*/
-.historia-row {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 70%;
-  margin: 0 auto 10px;
-  line-height: 30px;
-  font-size: 18px;
-}
-
-.historia-col {
-  width: 50%;
-  padding: 20px;
-}
-
 
 /*LINEA DEL TIEMPO*/
 .timeline {
@@ -318,6 +318,9 @@ video {
   border-radius: 8px;
 }
 
+
+
+/*FOOTER*/
 footer {
   background-color: var(--color-primario);
   color: white;
@@ -325,4 +328,38 @@ footer {
   padding: 1rem;
 }
 
+.contenido-footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
 
+.seccion-footer {
+  width: 50%;
+  max-width: 22%;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+  font-size: 18px;
+}
+
+.tituloh4 {
+  color: var(--color-acento);
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.links-footer {
+  list-style: none;
+}
+
+.links-footer li {
+  margin-bottom: 10px;
+}
+
+.copy {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 17px;
+}
