@@ -15,7 +15,6 @@
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   background-color: var(--color-texto2);
   color: var(--color-texto);
@@ -332,15 +331,16 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 .seccion-footer {
   width: 50%;
   max-width: 22%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
   padding: 0 1rem;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .tituloh4 {
@@ -355,6 +355,18 @@ footer {
 
 .links-footer li {
   margin-bottom: 10px;
+}
+
+.redes-sociales {
+  display: flex;             
+  justify-content: center;   
+  align-items: center;       
+  gap: 1rem;                 
+}
+
+.redes-sociales img {
+  width: 55px;               
+  height: 55px;
 }
 
 .copy {
