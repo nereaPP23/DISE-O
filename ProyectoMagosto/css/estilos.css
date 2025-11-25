@@ -28,6 +28,16 @@ h1 {
 
 }
 
+.tituloh2 {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 33px;
+  color: var(--color-texto); 
+}
+
+
+/*HEADER*/
 header {
   position: fixed;
   top: 0;
@@ -130,14 +140,6 @@ li a:hover {
   padding: 2rem 4rem;
 }
 
-.pueblo h2 {
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 33px;
-  color: var(--color-texto); 
-}
-
 .pueblo-contenedor {
   display: flex;
   flex-wrap: wrap;
@@ -146,10 +148,17 @@ li a:hover {
 }
 
 .pueblo-texto {
-  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   font-size: 1.1rem;
   color: var(--color-texto);
   line-height: 30px;
+}
+
+.texto-sobre {
+  max-width: 60%;
 }
 
 .pueblo-cards {
@@ -207,16 +216,7 @@ li a:hover {
 
 
 
-
 /*HISTORIA*/
-.titulo-historia {
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 33px;
-  color: var(--color-texto); 
-}
-
 .historia-row {
   display: flex;
   flex-wrap: wrap;
@@ -325,29 +325,4 @@ footer {
   padding: 1rem;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .imagenes {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  main {
-    padding: 1rem;
-  }
-
-  img, video {
-    width: 100%;
-  }
-}
