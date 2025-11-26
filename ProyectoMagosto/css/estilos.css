@@ -27,6 +27,13 @@ h1 {
 
 }
 
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
 .tituloh2 {
   font-weight: 600;
   text-align: center;
@@ -168,6 +175,7 @@ li a:hover {
   font-size: 1.1rem;
   color: var(--color-texto);
   line-height: 30px;
+  text-align: justify;
 }
 
 .texto-sobre {
@@ -284,6 +292,62 @@ li a:hover {
 
 
 
+/*GALERIA*/
+.carrusel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow:scroll;
+}
+
+.elementos-carrusel {
+  flex: 1 0 auto;
+  margin: 0 50px;
+  width: 500px;
+  height: 500px;
+}
+
+
+.elementos-carrusel img {
+  width: 500px;
+  height: 380px;
+}
+
+
+.galeria-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card-galeria {
+  background: var(--color-cajas);
+  padding: 20px;
+  width: 380px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.card-galeria:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.25);
+}
+
+.card-galeria h3 {
+  color: var(--color-primario);
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.galeria-cards img {
+  height: 380px;
+}
+
+
 
 
 /*SEPARACION DE SECCIONES*/
@@ -291,17 +355,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  text-align: justify;
 }
 
 section {
   border-bottom: 1px solid #ccc;
   padding-bottom: 2rem;
-}
-
-.imagenes {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
 }
 
 img {
@@ -310,12 +369,12 @@ img {
   border-radius: 8px;
 }
 
-video {
-  width: 100%;
-  max-width: 600px;
-  margin-top: 1rem;
-  border-radius: 8px;
+#facebook {
+  width: 45px;
+  height: 45px;
 }
+
+
 
 
 
