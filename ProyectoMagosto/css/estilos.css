@@ -1,7 +1,7 @@
 :root {
   --color-texto2: #fff8f0;
   --color-texto: #333;
-  --color-primario: #633B1A;
+  --color-primario: #5C3E21;
   --color-secundario: #D2691E;
   --color-acento: #FF7F50;
   --color-cajas: #ffd6a0;
@@ -15,17 +15,24 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--color-texto2);
   color: var(--color-texto);
 }
 
 h1 {
+  font-family: 'Lora', serif;
   font-size: 2rem;
   font-weight: bold;
   color: var(--color-texto2);
-
 }
+
+h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 
 .contenedor{
   display: flex;
@@ -35,6 +42,7 @@ h1 {
 }
 
 .tituloh2 {
+  font-family: 'Lora', serif;
   font-weight: 600;
   text-align: center;
   margin-bottom: 20px;
@@ -48,7 +56,7 @@ h1 {
   max-width: 70%;
   margin: 0 auto 10px;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .col {
@@ -97,6 +105,7 @@ li a {
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 0;
+  font-weight: bold;
 }
 
 li a:hover {
@@ -466,4 +475,153 @@ footer {
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255,255,255,0.1);
   font-size: 17px;
+}
+
+
+
+/*MEDIA QUERIES*/
+
+/* Tablets (≤ 992px) */
+@media screen and (max-width: 992px) {
+
+  /* Header */
+  .header-todo {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Pueblo */
+  .pueblo-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+  .texto-sobre {
+    max-width: 90%;
+  }
+  .pueblo-cards {
+    justify-content: center;
+  }
+  .card-pueblo {
+    width: 45%;   
+  }
+
+  /* Historia */
+  .row {
+    flex-direction: column;
+    max-width: 90%;
+  }
+  .col {
+    width: 100%;
+  }
+
+  .line {   /*La raya central*/
+  position: absolute; 
+  height: 90%;
+  left: 10%;
+  width: 10px;
+  background: var(--color-acento);
+}
+
+  .timeline-item.izq,
+  .timeline-item.der {
+    justify-content: flex-start;
+    padding: 0;
+    margin-left: 15%;
+    font-size: 17px;
+  }
+  .timeline-contenido {
+    max-width: 80%;
+  }
+
+  /* Tradiciones */
+  .tradiciones .row {
+    flex-direction: column;
+    max-width: 90%;
+  }
+  .tradiciones .col {
+    width: 100%;
+  }
+
+  /* Galería */
+  .video-container img {
+    max-width: 500px;
+  }
+
+  /* Footer */
+  .contenido-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .seccion-footer {
+    max-width: 90%;
+    text-align: center;
+  }
+}
+
+/* Móviles (≤ 576px) */
+@media screen and (max-width: 576px) {
+
+  /* Header */
+  .logo img {
+    width: 90px;
+    height: auto;
+  }
+  .nav-menu {
+    gap: 0.5rem;
+  }
+
+
+  /* Pueblo */
+  .texto-sobre {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+  .card-pueblo {
+    width: 100%; 
+  }
+
+  /* Historia */
+  .timeline-item.izq,
+  .timeline-item.der {
+    justify-content: flex-start;
+    padding: 0;
+    margin-left: 15%;
+    font-size: 15px;
+  }
+  .timeline-contenido {
+    max-width: 70%;
+  }
+
+  /* Tradiciones */
+  .tradiciones .col {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  /* Galería */
+  .card-galeria {
+    width: 100%; 
+    max-width: 280px;
+  }
+  .galeria-cards img {
+    height: auto;
+    max-height: 200px;
+  }
+  .video-container img {
+    max-width: 300px;
+  }
+
+  /* Footer */
+  .seccion-footer {
+    width: 100%;
+    font-size: 15px;
+  }
+  .redes-sociales img {
+    width: 40px;
+    height: 40px;
+  }
 }
