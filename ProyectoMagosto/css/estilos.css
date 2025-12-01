@@ -485,7 +485,7 @@ footer {
 
 /*MEDIA QUERIES*/
 
-/* Tablets (≤ 992px) */
+/* Tablets */
 @media screen and (max-width: 992px) {
 
   /* Header */
@@ -566,7 +566,7 @@ footer {
   }
 }
 
-/* Móviles (≤ 576px) */
+/* Móviles */
 @media screen and (max-width: 576px) {
 
   /* Header */
