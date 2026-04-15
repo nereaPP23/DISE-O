@@ -1,0 +1,27 @@
+.container {
+  height: 600px;
+  background-color: rgb(199, 203, 206);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.fila1 {
+  background-color: rgb(71, 91, 202);
+}
+
+.fila2 {
+  height: 100px;
+}
+
+.fila3 {
+  height: 100px;
+  background-color: rgb(218, 151, 28);
+}
+
+.fila4 {
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+}
+
+.columnaA {
+  background-color: white;
+}
