@@ -1,0 +1,42 @@
+:root {
+  --color-texto2: #fff8f0;
+  --color-texto: #333;
+  --color-primario: #5c3e21;
+  --color-secundario: #d2691e;
+  --color-acento: #ff7f50;
+  --color-cajas: #ffd6a0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-texto2);
+  color: var(--color-texto);
+}
+
+nav {
+  background: var(--color-primario);
+}
+
+.navbar-brand {
+  color: var(--color-texto2);
+  font-weight: bold;
+}
+
+ul {
+  font-weight: bold;
+}
+
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+  object-position: center 60%;
+}
+
+.carousel-caption {
+  background: rgba(255, 214, 160, 0.75);
+  width: auto;
+  bottom: 1.5rem;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  color: var(--color-secundario);
+}
