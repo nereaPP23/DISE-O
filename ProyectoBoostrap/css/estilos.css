@@ -13,6 +13,17 @@ body {
   color: var(--color-texto);
 }
 
+h1 {
+  font-family: "Lora", serif;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: "Lora", serif;
+  font-size: 25px;
+  font-weight: bold;
+}
 /* Navbar */
 nav {
   background: var(--color-primario);
@@ -76,4 +87,14 @@ ul {
   border-radius: 30px;
   cursor: pointer;
   text-decoration: none;
+}
+
+/*Historia*/
+.historia {
+  text-align: justify;
+}
+
+/*Tradiciones*/
+.tradiciones {
+  text-align: justify;
 }
