@@ -98,6 +98,30 @@ ul {
   text-align: justify;
 }
 
+.timeline {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid var(--color-secundario);
+}
+
+.timeline span {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-primario);
+  margin-bottom: 8px;
+}
+
+.timeline p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+.der {
+  border-left-color: var(--color-primario);
+}
+
 /*Tradiciones*/
 .tradiciones {
   text-align: justify;
