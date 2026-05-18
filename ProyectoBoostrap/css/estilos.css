@@ -5,22 +5,24 @@
   --color-secundario: #d2691e;
   --color-acento: #ff7f50;
   --color-cajas: #ffd6a0;
+  --letra-general: Montserrat, sans-serif;
+  --letra-titulo: Lora, serif;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--letra-general);
   background-color: var(--color-texto2);
   color: var(--color-texto);
 }
 
 h1 {
-  font-family: "Lora", serif;
+  font-family: var(--letra-titulo);
   font-size: 35px;
   font-weight: bold;
 }
 
 h3 {
-  font-family: "Lora", serif;
+  font-family: var(--letra-titulo);
   font-size: 25px;
   font-weight: bold;
 }
@@ -221,6 +223,6 @@ footer a {
 }
 
 .footer-socialMedia img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
